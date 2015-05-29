@@ -30,9 +30,6 @@ class ImageMod:
             self.colors.append(available_colors[ i % len(available_colors) ])
 
     def draw_rectangle(self, draw, x, y, count):
-        if(count > self.image_size):
-            count = (count ** self.mod) + randint(0, count)
-
         draw.rectangle(
             [x, y, x + self.size, y + self.size],
             self.colors[count % self.mod])
